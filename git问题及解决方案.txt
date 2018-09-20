@@ -1,0 +1,11 @@
+问题一：在windows下，我的git配置后，除了git status之外的命令，显示中文都没有问题。git status显示中文文件名字和目录名字都是乱码
+解决方案如下：
+	具体配置先选项：
+		git config --global gui.encoding utf-8
+		git config --global i18n.commitencoding utf-8
+		git config --global i18n.logoutputencoding gbk
+		
+		git config --global core.quotepath  false
+	修改Git\etc\inputrc文件中的两项配置：
+		set output-meta on
+		set convert-meta off
